@@ -1,0 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.bg-banner {
+  background: url("./images/circle-bg.png") bottom no-repeat;
+}
+
+.container-iphone-x {
+  position: static;
+  right: 0;
+  top: 0;
+  transform: none;
+  width: fit-content;
+  margin: auto;
+  padding-top: 40px;
+}
+
+.left-header,
+.right-header {
+  position: static;
+  opacity: 1;
+}
+
+@media only screen and (min-width: 1024px) {
+  .container-iphone-x {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translate(0, -50%);
+  }
+  .left-header,
+  .right-header {
+    position: absolute;
+    opacity: 0;
+    transition: all 0.5s;
+  }
+
+  .left-header {
+    top: 7px;
+    left: -50px;
+  }
+
+  .right-header {
+    top: 0px;
+    right: -50px;
+  }
+}
